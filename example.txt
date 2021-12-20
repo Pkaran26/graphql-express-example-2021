@@ -1,0 +1,32 @@
+/*Mutation*/
+mutation {
+  addPost(title: "test", image: "test", intro: "test", body: "test", tags: ["61bf5809fc13ae33450004ba", "61bf5809fc13ae33450004bb", "61bf5809fc13ae33450004bc"], category_id: "61bf57f2fc13ae1c2900006e", author_id: "61bf56c5fc13ae2d86000000") {
+    acknowledged
+    insertedId
+  }
+}
+
+/*Query*/
+{
+  postDetail(_id: "61c0717b048ad97af5c89de7") {
+    _id
+    title
+    likes
+    comments
+    publish_at
+    body
+    tags {
+      _id
+      tags
+    }
+    category {
+      _id
+      category
+    }
+    author {
+      _id
+      first_name
+      last_name
+    }
+  }
+}
